@@ -13,17 +13,13 @@ window.onload = function() {
   let noun = ["jogger", "racoon", "dog", "rigo"];
   let extensions = ["com", "es", "us", "io"];
 
-  function loopArray() {
-    pronoun.forEach(element => {
-      adj.forEach(item => {
-        noun.forEach(object => {
-          extensions.forEach(ext => {
-            domain.innerHTML += `<p> ${element}${item}${object}.${ext} </p>`;
-          });
+  pronoun.forEach(element => {
+    adj.forEach(item => {
+      noun.forEach(object => {
+        extensions.forEach(part => {
+          domain.innerHTML += `<p> ${element}${item}${object}.${part} </p>`;
         });
       });
     });
-  }
-
-  loopArray();
+  });
 };
